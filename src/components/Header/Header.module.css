@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  height: 90px;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgb(217, 217, 217);
+}
+
+.logo {
+  position: absolute;
+  left: 50vw;
+  top: auto;
+  height: 52px;
+  width: 52px;
+  background-image: url("./assets/heart-logo.svg");
+}
+
+.userMenu {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 100px;
+}
+
+.userName {
+  font-size: 20px;
+}
+
+.button {
+  height: 24px;
+  width: 24px;
+  background: url("./assets/arrow-chevron-down.svg");
+  background-size: 100%;
+  border: 0;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+}
+
+.userPic {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=Header.module.css.map */

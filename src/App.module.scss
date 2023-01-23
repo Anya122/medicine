@@ -1,0 +1,16 @@
+.appWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    }
+
+.contentWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+
+    border: brown solid 1px;
+
+}
