@@ -1,0 +1,28 @@
+.properties {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 19px;
+  margin-top: 95px;
+  border: solid 1px brown;
+  box-sizing: border-box;
+  width: 306px;
+}
+
+.header {
+  margin: 0 auto 33px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.specialistTitle {
+  display: block;
+  margin-top: 33px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+/*# sourceMappingURL=Properties.module.css.map */
