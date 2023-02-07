@@ -2,6 +2,8 @@ import React from "react";
 import s from "./Properties.module.scss"
 import Select from "./Select/Select";
 import SpecialistFinder from "./SpecialistFinder/SpecialistFinder";
+import RecentList from "./RecentList/RecentList";
+import ViewSelector from "./ViewSelector/ViewSelector";
 
 
 const Properties = () => {
@@ -16,17 +18,14 @@ const Properties = () => {
 
             <SpecialistFinder />
 
-            <ul>
-                Последние
-                <li>
-                    Константин Константинов
-                </li>
-            </ul>
+            <RecentList />
 
-            <span>Вид</span>
-            <button>День</button>
-            <button>Неделя</button>
-            <button>Месяц</button>
+            <ViewSelector />
+
+
+
+
+
 
         </div>
     );

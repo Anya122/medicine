@@ -4,7 +4,12 @@ import s from "./SpecialistFinder.module.scss"
 const SpecialistFinder = () => {
     return (
         <div>
-            <input className={s.input}/>
+            <div className={s.wrapperInput}>
+                <input className={s.input} placeholder={"Поиск врача"}/>
+                <span className={s.searchIcon}/>
+            </div>
+
+
         </div>
     );
 };
