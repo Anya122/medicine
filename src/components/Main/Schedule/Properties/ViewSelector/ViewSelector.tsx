@@ -15,7 +15,7 @@ const ViewSelector = () => {
             <div className={s.buttons}>
                 {
                     buttons.map(b =>
-                        <button key={b.id} className={s.button+' '+(b.isSelected===true ? s.buttonSelected : '')}>
+                        <button key={b.id} className={s.button+' '+(b.isSelected ? s.buttonSelected : '')}>
                             {b.buttonName}
                         </button>)
                 }
