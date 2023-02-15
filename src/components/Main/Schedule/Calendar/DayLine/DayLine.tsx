@@ -16,7 +16,7 @@ const DayLine = () => {
     return (
         <div className={s.dayLine}>
             <div className={s.weekPerDay}>
-                {week.map(d => <div className={s.oneDay}>{`${d.dayNumber}, ${d.dayName}`}</div>)}
+                {week.map(d => <div className={s.oneDay} key={d.dayNumber}>{`${d.dayNumber}, ${d.dayName}`}</div>)}
             </div>
             <span className={s.underLine}/>
         </div>

@@ -1,6 +1,54 @@
 .table {
-  width: 1384px;
+  margin-top: 17px;
   height: 745px;
+}
+
+.oneRow {
+  width: 1384px;
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  box-sizing: border-box;
+  margin-bottom: 2px;
+}
+
+.rowTime {
+  width: 54px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.rowWeek {
+  height: 68px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  margin-left: 5px;
+}
+
+.day {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 2px;
+}
+
+.upperBox {
+  width: 185px;
+  height: 32px;
+  border-radius: 20px;
+  background-color: white;
+  text-align: center;
+  font-size: 15px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: 0.09px;
+}
+
+.underBox {
+  width: 185px;
+  height: 32px;
+  border-radius: 20px;
+  background-color: white;
 }
 
 /*# sourceMappingURL=Table.module.css.map */
