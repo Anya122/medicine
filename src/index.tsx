@@ -6,23 +6,29 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Login from "./components/Login/Login";
 import PrivateRoute from "./utils/router/PrivateRoute";
+import {Provider} from "react-redux";
+import {setupStore} from "./store/store";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
+
+const store = setupStore();
+
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route element={<PrivateRoute />}>
-                    <Route path="/" element={<App/>}/>
-                </Route>
+        <Provider store={store}>
+            <BrowserRouter>
+                <Routes>
+                    <Route element={<PrivateRoute />}>
+                        <Route path="/" element={<App/>}/>
+                    </Route>
 
-                <Route path="login" element={<Login/>}/>
-            </Routes>
+                    <Route path="login" element={<Login/>}/>
+                </Routes>
+            </BrowserRouter>
+        </Provider>
 
-
-        </BrowserRouter>
 
     </React.StrictMode>
 );

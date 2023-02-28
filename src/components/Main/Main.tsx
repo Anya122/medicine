@@ -6,6 +6,11 @@ const Main = () => {
     return (
         <div className={s.main}>
             <Schedule />
+
+
+
+
+
         </div>
     );
 };

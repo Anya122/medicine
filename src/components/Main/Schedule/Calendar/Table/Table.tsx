@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import s from "./Table.module.scss"
-
+import {useAppDispatch, useAppSelector} from "../../../../../hooks/redux";
+import {fetchUsers} from "../../../../../store/reducers/ActioanCreators";
 
 const Table = () => {
 
@@ -34,7 +35,8 @@ const Table = () => {
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
             ]
-        }, {
+        },
+        {
             day: 3,
             visits: [
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
@@ -48,7 +50,8 @@ const Table = () => {
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
             ]
-        }, {
+        },
+        {
             day: 4,
             visits: [
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
@@ -62,7 +65,8 @@ const Table = () => {
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
             ]
-        }, {
+        },
+        {
             day: 5,
             visits: [
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
@@ -76,7 +80,8 @@ const Table = () => {
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
             ]
-        }, {
+        },
+        {
             day: 6,
             visits: [
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
@@ -90,7 +95,8 @@ const Table = () => {
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
             ]
-        }, {
+        },
+        {
             day: 7,
             visits: [
                 {time: 'time', clientFullName: 'Петров Василий Васильевич'},
@@ -107,16 +113,20 @@ const Table = () => {
         },
     ];
 
+    let oneWeek = schedule.map((t) =>
+        t.visits[0].clientFullName).map((t) =>
+        <div className={s.day} key={Math.random()}>
+            <div className={s.upperBox}>{t}</div>
+            <div className={s.underBox}/>
+        </div>
+    );
 
-    let oneTime2 =
-        schedule.map((t) => {
-            return t.visits[0].clientFullName
-        }).map((t) =>
-            <div className={s.day}>
-                <div className={s.upperBox}>{t}</div>
-                <div className={s.underBox}/>
-            </div>
-        )
+    const dispatch = useAppDispatch();
+    const {users, isLoading, error} = useAppSelector(state => state.userReducer);
+
+    useEffect(() => {
+        dispatch(fetchUsers())
+    }, []);
 
 
     return (
@@ -124,9 +134,9 @@ const Table = () => {
             <div className={s.oneRow}>
                 <div className={s.rowTime}/>
                 <div className={s.rowWeek}>
-                    {
-                        oneTime2
-                    }
+                    {isLoading && <h3>Идёт загрузка ...</h3>}
+                    {error && <h3>{error}</h3>}
+                    {JSON.stringify(users, null, 1)}
                 </div>
             </div>
 
