@@ -1,54 +1,54 @@
 .table {
-  margin-top: 17px;
-  height: 745px;
-}
-
-.oneRow {
-  width: 1384px;
-  display: grid;
-  grid-template-columns: 54px 1fr;
   box-sizing: border-box;
-  margin-bottom: 2px;
 }
 
-.rowTime {
-  width: 54px;
-  height: 45px;
-  border-radius: 20px;
-  background-color: white;
+.grid {
+  position: absolute;
 }
 
-.rowWeek {
-  height: 68px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-column-gap: 5px;
+.hBlock:nth-child(1) {
+  margin-top: 36px;
+}
+
+.hBlock {
+  margin-top: 59px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeStamp {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: -0.41px;
+  color: rgb(0, 0, 0);
+}
+
+.hTimeLine {
+  display: block;
+  width: 1344px;
+  border-top: rgba(112, 112, 112, 0.5) 1px solid;
   margin-left: 5px;
 }
 
-.day {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-row-gap: 2px;
+.vLines {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
 }
 
-.upperBox {
-  width: 185px;
-  height: 32px;
-  border-radius: 20px;
-  background-color: white;
-  text-align: center;
-  font-size: 15px;
-  line-height: 32px;
-  font-weight: 400;
-  letter-spacing: 0.09px;
+.vBlock:nth-child(1) {
+  margin-left: 245px;
 }
 
-.underBox {
-  width: 185px;
-  height: 32px;
-  border-radius: 20px;
-  background-color: white;
+.vBlock {
+  display: block;
+  border-left: rgba(112, 112, 112, 0.5) 1px solid;
+  width: 1px;
+  height: 776px;
+  margin-left: 172px;
 }
 
 /*# sourceMappingURL=Table.module.css.map */

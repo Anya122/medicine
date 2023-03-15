@@ -3,8 +3,9 @@ import s from './App.module.scss';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Sidebar from './components/Sidebar/Sidebar';
-import {useAppDispatch, useAppSelector} from "./hooks/redux";
-import {userSlice} from "./store/reducers/UserSlice";
+
+
+//http://192.168.1.205:8080/
 
 
 function App() {

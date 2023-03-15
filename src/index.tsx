@@ -8,6 +8,7 @@ import Login from "./components/Login/Login";
 import PrivateRoute from "./utils/router/PrivateRoute";
 import {Provider} from "react-redux";
 import {setupStore} from "./store/store";
+import axios from "axios";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -15,8 +16,8 @@ const root = ReactDOM.createRoot(
 
 const store = setupStore();
 
+
 root.render(
-    <React.StrictMode>
         <Provider store={store}>
             <BrowserRouter>
                 <Routes>
@@ -28,9 +29,6 @@ root.render(
                 </Routes>
             </BrowserRouter>
         </Provider>
-
-
-    </React.StrictMode>
 );
 
 reportWebVitals();
