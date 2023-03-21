@@ -27,13 +27,12 @@ const Table = () => {
     const vLines = Array(6).fill(0).map((t, i) => i + 1);
 
     // Смещение на 1 час - 81px
-
     const [h, setH] = useState(() => {
-        const clock = new Date;
+        const clock = new Date();
         return clock.getHours();
     });
     const [m, setM] = useState(() => {
-        const clock = new Date;
+        const clock = new Date();
         return clock.getMinutes();
     });
     const [verticalShift, setVerticalShift] = useState(() => {
@@ -41,21 +40,14 @@ const Table = () => {
         return `${res.toString()}px`;
     });
 
-    const getDate = () => {
-        const clock = new Date;
-        setH(clock.getHours());
-        setM(clock.getMinutes());
-    }
-
-    const calculateShift = () => {
-       return ((h * 60 + m - 8 * 60) * 729) / (9 * 60);
-    }
-
     useEffect(() => {
         const interval = setInterval(() => {
-            getDate();
-            setVerticalShift(`${calculateShift().toString()}px`);
-            console.log(verticalShift);
+            const clock = new Date();
+            const min = clock.getMinutes();
+            const hour = clock.getHours();
+            setH(clock.getHours());
+            setM(clock.getMinutes());
+            setVerticalShift((((hour * 60 + min - 8 * 60) * 729) / (9 * 60)).toString()+'px');
         }, 10000);
         return () => clearInterval(interval);
     }, [verticalShift]);
