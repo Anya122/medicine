@@ -1,0 +1,31 @@
+.wrapperInput {
+  position: relative;
+}
+
+.searchIcon {
+  display: block;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 17px;
+  background-image: url("../../assets/search.svg");
+}
+
+.input {
+  display: block;
+  box-sizing: border-box;
+  width: 301px;
+  height: 42px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding-left: 61px;
+  padding-right: 20px;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=SpecialistFinder.module.css.map */

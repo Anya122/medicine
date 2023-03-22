@@ -1,33 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import s from "./Table.module.scss"
 import {useAppSelector} from "../../../../../hooks/redux";
+import {timeMarkers} from "../../../Schedule/Calendar/Table/Table";
 
-export const timeMarkers = [
-    "8.00",
-    "9.00",
-    "10.00",
-    "11.00",
-    "12.00",
-    "13.00",
-    "14.00",
-    "15.00",
-    "16.00",
-    "17.00",
-    "18.00",
-    "19.00",
-    "20.00",
-    "21.00",
-    "22.00",
-    "23.00",
-    "24.00",
-];
 
 const Table = () => {
-    const visits = useAppSelector(state => state.visitsReducer);
-
-
-    const vLines = Array(6).fill(0).map((t, i) => i + 1);
-
     // Смещение на 1 час - 81px
     const [h, setH] = useState(() => {
         const clock = new Date();
@@ -64,10 +41,6 @@ const Table = () => {
                         <div className={s.timeStamp}>{t}</div>
                         <span className={s.hTimeLine}/>
                     </div>)}
-            </div>
-
-            <div className={s.vLines}>
-                {vLines.map(t => <span key={t} className={s.vBlock}/>)}
             </div>
 
             <div className={s.realTimeLine} style={{marginTop: verticalShift}}>

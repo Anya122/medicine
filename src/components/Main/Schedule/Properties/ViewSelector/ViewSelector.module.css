@@ -1,6 +1,6 @@
 .viewSelectorWrapper {
   box-sizing: border-box;
-  margin-top: 34px;
+  margin-top: 196px;
 }
 
 .label {
@@ -36,6 +36,10 @@
 
 .buttonSelected {
   background-color: rgb(217, 217, 217);
+}
+
+.link {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=ViewSelector.module.css.map */

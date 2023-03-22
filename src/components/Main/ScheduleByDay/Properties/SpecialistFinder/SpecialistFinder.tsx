@@ -1,11 +1,11 @@
 import React from 'react';
 import s from "./SpecialistFinder.module.scss"
 
-const SpecialistFinder = (props:any) => {
+const SpecialistFinder = () => {
     return (
         <div>
             <div className={s.wrapperInput}>
-                <input className={s.input} placeholder={props.placeholder}/>
+                <input className={s.input} placeholder={"Поиск врача"}/>
                 <span className={s.searchIcon}/>
             </div>
 

@@ -16,13 +16,12 @@ const root = ReactDOM.createRoot(
 
 const store = setupStore();
 
-
 root.render(
         <Provider store={store}>
             <BrowserRouter>
                 <Routes>
                     <Route element={<PrivateRoute />}>
-                        <Route path="/" element={<App/>}/>
+                        <Route path="/*" element={<App/>}/>
                     </Route>
 
                     <Route path="login" element={<Login/>}/>

@@ -2,6 +2,7 @@ import React from "react";
 import s from "./Properties.module.scss"
 import Select from "./Select/Select";
 import SpecialistFinder from "./SpecialistFinder/SpecialistFinder";
+import RecentList from "./RecentList/RecentList";
 import ViewSelector from "./ViewSelector/ViewSelector";
 
 
@@ -11,22 +12,15 @@ const Properties = () => {
 
             <h3 className={s.header}>Расписание</h3>
 
-            <Select key={'календарь'} />
+            <Select />
 
             <span className={s.specialistTitle}>Специалист</span>
-            <SpecialistFinder placeholder="ФИО"/>
 
-            <span className={s.specialistTitle}>Специальность</span>
-            <SpecialistFinder placeholder="Специальность"/>
+            <SpecialistFinder />
 
+            <RecentList />
 
             <ViewSelector />
-
-
-
-
-
-
         </div>
     );
 };

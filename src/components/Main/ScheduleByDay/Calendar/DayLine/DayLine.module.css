@@ -1,0 +1,28 @@
+.underLine {
+  display: block;
+  min-width: 1384px;
+  height: 1px;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+
+.weekPerDay {
+  min-width: 1379px;
+  height: 32px;
+  margin-top: 51px;
+  margin-left: -5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.oneDay {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0.09px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/*# sourceMappingURL=DayLine.module.css.map */

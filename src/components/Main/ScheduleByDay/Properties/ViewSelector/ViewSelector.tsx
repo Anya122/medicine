@@ -5,8 +5,8 @@ import {Link} from "react-router-dom";
 const ViewSelector = () => {
 
     let buttons = [
-        {id: "day", isSelected: false, buttonName: "День", link: "/schedulebyday"},
-        {id: "week", isSelected: true, buttonName: "Неделя", link: "/schedule"},
+        {id: "day", isSelected: true, buttonName: "День", link: "/schedulebyday"},
+        {id: "week", isSelected: false, buttonName: "Неделя", link: "/schedule"},
         {id: "month", isSelected: false, buttonName: "Месяц", link: "/login"},
     ]
 
@@ -20,8 +20,7 @@ const ViewSelector = () => {
                             <button key={b.id} className={s.button + ' ' + (b.isSelected ? s.buttonSelected : '')}>
                                 {b.buttonName}
                             </button>
-                        </Link>
-                    )
+                        </Link>)
                 }
             </div>
         </div>
