@@ -42,6 +42,19 @@ const Table = () => {
         return `${res.toString()}px`;
     });
 
+    //Условие приближения линии времени к горизонтальным линиям
+    const horizontalBlock =
+        timeMarkers.map(t =>
+            <div key={t} className={s.hBlock}>
+                {
+
+                    ((+t === h)&&(m < 10))||((+t-1 === h)&&(m > 50))
+                        ?<div className={s.timeStamp} style={{color: "transparent"}}>{t}</div>
+                        :<div className={s.timeStamp}>{t}</div>
+                }
+                <span className={s.hTimeLine}/>
+            </div>);
+
     useEffect(() => {
         const interval = setInterval(() => {
             const clock = new Date();
@@ -49,21 +62,20 @@ const Table = () => {
             const hour = clock.getHours();
             setH(clock.getHours());
             setM(clock.getMinutes());
-            setVerticalShift((((hour * 60 + min - 8 * 60) * 729) / (9 * 60)).toString()+'px');
+            setVerticalShift((((hour * 60 + min - 8 * 60) * 729) / (9 * 60)).toString() + 'px');
         }, 10000);
+
         return () => clearInterval(interval);
     }, [verticalShift]);
+
+
 
 
     return (
         <div className={s.table}>
 
             <div className={s.grid}>
-                {timeMarkers.map(t =>
-                    <div key={t} className={s.hBlock}>
-                        <div className={s.timeStamp}>{t}</div>
-                        <span className={s.hTimeLine}/>
-                    </div>)}
+                {horizontalBlock}
             </div>
 
             <div className={s.vLines}>
