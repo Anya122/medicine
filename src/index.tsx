@@ -8,7 +8,6 @@ import Login from "./components/Login/Login";
 import PrivateRoute from "./utils/router/PrivateRoute";
 import {Provider} from "react-redux";
 import {setupStore} from "./store/store";
-import axios from "axios";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -30,4 +29,3 @@ root.render(
         </Provider>
 );
 
-reportWebVitals();

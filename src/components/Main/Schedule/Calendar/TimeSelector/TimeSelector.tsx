@@ -1,50 +1,30 @@
 import React, {useEffect, useState} from 'react';
 import s from "./TimeSelector.module.scss"
-
 import moment from 'moment';
 import 'moment/locale/ru';
+import {timeSlice} from "../../../../../store/reducers/TimeSlice";
+import {useAppDispatch, useAppSelector} from "../../../../../hooks/redux";
 
 const TimeSelector = () => {
 
     moment.locale('ru');
 
-    const [time, setTime] = useState(moment());
-    const [selectedPeriod, setSelectedPeriod] = useState(
-        {
-            startDay: moment().weekday(0).format('D'),
-            endDay: moment().weekday(6).format('D'),
-            startWeekMonth: moment().weekday(0).format('MMMM'),
-            endWeekMonth: moment().weekday(6).format('MMMM'),
-        });
+    const {setNewPeriodByWeek} = timeSlice.actions;
+    const {selectedWeek} = useAppSelector(state => state.timeReducer);
+    const dispatch = useAppDispatch();
 
-    const changePeriod = (shift: number) => {
-        switch (shift) {
-            case 1:
-                setTime(moment(time).subtract(-1, 'week'));
-                break;
-            case 0:
-                setTime(moment(time).subtract(0, 'week'));
-                break;
-            case (-1):
-                setTime(moment(time).subtract(1, 'week'));
-                break;
-        }
-    };
-
-    useEffect(()=> {
-        setSelectedPeriod(
-        {
-            startDay: moment(time).weekday(0).format('D'),
-            endDay: moment(time).weekday(6).format('D'),
-            startWeekMonth: moment(time).weekday(0).format('MMMM'),
-            endWeekMonth: moment(time).weekday(6).format('MMMM'),
-        });
-    }, [time])
-
+    const selectedPeriod = {
+        startDay: moment(selectedWeek.toString(), 'w').weekday(0).format('D'),
+        endDay: moment(selectedWeek.toString(), 'w').weekday(6).format('D'),
+        startWeekMonth: moment(selectedWeek.toString(), 'w').weekday(0).format('MMMM'),
+        endWeekMonth: moment(selectedWeek.toString(), 'w').weekday(6).format('MMMM'),
+    }
 
     return (
         <div className={s.timeSelector}>
-            <button className={s.leftButton} onClick={()=> {changePeriod(-1)}}/>
+            <button className={s.leftButton} onClick={() => {
+                dispatch(setNewPeriodByWeek('prevWeek'));
+            }}/>
             <span className={s.period}>
                 {
                     selectedPeriod.endWeekMonth === selectedPeriod.startWeekMonth ?
@@ -54,7 +34,9 @@ const TimeSelector = () => {
                         - ${selectedPeriod.endDay} ${selectedPeriod.endWeekMonth}`
                 }
             </span>
-            <button className={s.rightButton} onClick={()=> {changePeriod(1)}}/>
+            <button className={s.rightButton} onClick={() => {
+                dispatch(setNewPeriodByWeek('nextWeek'));
+            }}/>
         </div>
     );
 };
