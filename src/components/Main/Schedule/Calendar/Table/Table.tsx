@@ -22,7 +22,12 @@ export const timeMarkers = [
     "24.00",
 ];
 
-const Table = () => {
+type Props = {
+    info: string
+}
+
+
+const Table = ({info}:Props) => {
     const visits = useAppSelector(state => state.visitsReducer);
 
 

@@ -1,0 +1,40 @@
+.modaloverlay {
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalbox {
+  display: block;
+  background: white;
+  width: 632px;
+  height: 681px;
+  padding: 1rem;
+  border-radius: 80px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ModalBtn {
+  width: 128px;
+  height: 53px;
+  background-color: #D6D4D4;
+  border-radius: 30px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.ModalBtn:hover {
+  opacity: 0.7;
+}
+
+/*# sourceMappingURL=Modal.module.css.map */

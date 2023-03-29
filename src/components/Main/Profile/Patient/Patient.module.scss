@@ -1,0 +1,81 @@
+
+.PatientNum{
+    margin-left: 15px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.ThisPatient{
+    display: flex;
+    align-items: center;
+    column-gap: 33px;
+    margin-bottom: 60px;
+}
+.PatientImg{
+    width: 198px;
+    height: 201px;
+    background-image: url("../assets/Patient.svg");
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+}
+
+.PatientName{
+    font-size: 25px;
+}
+
+.AboutPatient{
+    display: flex;
+    column-gap: 20px;
+    font-size: 20px;
+    margin-bottom: 99px;
+}
+    
+.Names{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    text-align: right;
+    
+}
+
+.Info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+    
+    
+    
+.AboutName{
+    color: #00000099;
+    
+}
+
+.PatientBtn{
+    width: 290px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+    padding: 19px 30px 19px 57px;
+    font-size: 23px;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 190px;
+}
+
+.PatientBtn:hover{
+    background-color: #DADADA;
+}
+
+.ArrBtn{
+    width: 13px;
+    height: 15px;
+    background-image: url("../assets/Start.svg");
+    
+}
+.PatientMain{
+    display: flex;
+    
+}

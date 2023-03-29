@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+.appWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+/*# sourceMappingURL=Login.module.css.map */

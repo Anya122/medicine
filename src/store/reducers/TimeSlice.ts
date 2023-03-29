@@ -2,7 +2,9 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import moment from 'moment';
 
 const initialState = {
+    // Номер недели в году, которую выбрали
     selectedWeek: +(moment().format('w')),
+    // На сколько и в какую сторону от сегодняшней даты сдвинули календарь по неделям
     weekBias: 0,
 };
 

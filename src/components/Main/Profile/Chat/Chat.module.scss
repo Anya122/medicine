@@ -1,0 +1,37 @@
+.Chat{
+    width: 745px;
+    height: 915px;
+    border-radius: 50px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    background-color: #FFFFFF;
+}
+
+.ChatMain{
+    height: 844px;
+    padding: 47px 66px 0 66px;
+}
+
+.ChatBottom{
+    padding: 16px 25px 25px 25px ;
+    height: 71px;
+    width: 745px;
+    background-color: #D9D9D9;
+    border-radius: 0 0 50px 50px;
+    display: flex;
+}
+.ChatAvatar{
+    width: 41px;
+    height: 41px;
+    background-image: url("../assets/Avatar.svg");
+}
+
+.ChatName{
+    font-size: 20px;    
+}
+
+.ChatTop{
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+}
+

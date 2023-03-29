@@ -12,7 +12,7 @@ const Calendar = () => {
 
             <DayLine />
 
-            <Table />
+            <Table info={'руддщ'} />
 
         </div>
     );

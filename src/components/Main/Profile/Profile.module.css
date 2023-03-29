@@ -1,0 +1,33 @@
+.Profile {
+  padding: 22px 80px 35px 25px;
+  font-family: "SF Pro Display";
+}
+
+.Back {
+  display: flex;
+  align-items: center;
+}
+
+.BackArr {
+  width: 5px;
+  height: 10px;
+  background-image: url("./assets//BackArrow.svg");
+  margin-right: 18px;
+}
+
+.BackText {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6980392157);
+  cursor: pointer;
+}
+
+.BackText:hover {
+  color: #000000;
+}
+
+.ProfileMain {
+  padding-left: 143px;
+  display: flex;
+}
+
+/*# sourceMappingURL=Profile.module.css.map */

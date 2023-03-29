@@ -1,0 +1,13 @@
+.main {
+  display: block;
+  width: 100%;
+  background-color: rgb(233, 233, 233);
+  margin-right: 20px;
+  padding-top: 20px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+/*# sourceMappingURL=Appoinments.module.css.map */

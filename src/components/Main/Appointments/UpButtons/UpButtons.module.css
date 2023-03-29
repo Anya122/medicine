@@ -1,0 +1,36 @@
+@font-face {
+  font-family: SF;
+  src: url("./SF-Pro-Display-Regular.otf");
+}
+@font-face {
+  font-family: SF;
+  src: url("./SF-Pro-Display-Regular.otf");
+}
+* {
+  box-sizing: border-box;
+}
+
+.buttons {
+  width: 840px;
+  margin: 0 auto;
+  display: flex;
+  column-gap: 18px;
+}
+
+.btn {
+  width: 199px;
+  height: 48px;
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+  background-color: #FFFFFF;
+  font-family: "SF-Pro-Display-Regular";
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+/*# sourceMappingURL=UpButtons.module.css.map */

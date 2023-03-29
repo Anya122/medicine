@@ -1,0 +1,18 @@
+.medicine {
+    height: 1080px;
+    width: 912px;
+    background-image: linear-gradient(
+        180deg, rgba(70, 244, 255, 0.7) 0%,
+         rgba(155, 121, 251, 0.7) 100%),
+        url("./assets/medicine.svg");
+    position: relative;
+}
+
+.logo{
+    background-image: url("./assets/heart1.svg");
+    width: 350px;
+    height: 194px;
+    position: absolute;
+    top: 36%;
+    left: 23%;
+}

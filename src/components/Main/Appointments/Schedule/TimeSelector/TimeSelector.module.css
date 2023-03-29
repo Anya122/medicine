@@ -1,0 +1,42 @@
+@font-face {
+  font-family: SF;
+  src: url("./SF-Pro-Display-Regular.otf");
+}
+.today {
+  font-weight: 500;
+  font-size: 25px;
+  font-family: SF;
+  text-align: center;
+}
+
+.timeSelector {
+  width: 318px;
+  margin: 0 auto;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftButton, .rightButton {
+  display: block;
+  width: 11px;
+  height: 24px;
+  cursor: pointer;
+  outline: none;
+  border-style: none;
+  background-color: transparent;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.leftButton {
+  background-image: url("./Vector 119.svg");
+}
+
+.rightButton {
+  background-image: url("./Vector 118.svg");
+}
+
+/*# sourceMappingURL=TimeSelector.module.css.map */

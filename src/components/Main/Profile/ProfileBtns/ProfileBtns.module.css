@@ -1,0 +1,21 @@
+.Btns {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 38px;
+}
+
+.BtnItem {
+  width: 199px;
+  height: 48px;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.BtnItem:hover {
+  background-color: #DADADA;
+}
+
+/*# sourceMappingURL=ProfileBtns.module.css.map */

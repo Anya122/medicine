@@ -1,0 +1,49 @@
+.menu {
+  margin-top: 83px;
+  padding-left: 18px;
+  font-family: "SF-Pro-Display-Regular";
+}
+
+.name {
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 36px;
+}
+
+.type {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.btns {
+  display: flex;
+  column-gap: 15px;
+  margin-bottom: 38px;
+  margin-top: 10px;
+}
+
+.btn {
+  width: 84px;
+  height: 48px;
+  background-color: #FFFFFF;
+  font-family: "SF-Pro-Display-Regular";
+  border-radius: 20px;
+  border: none;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.down {
+  width: 428px;
+  height: 100vh;
+  background-color: #FFFFFF;
+  border-radius: 0px 40px 0px 0px;
+  margin-left: 2px;
+}
+
+/*# sourceMappingURL=LeftMenu.module.css.map */

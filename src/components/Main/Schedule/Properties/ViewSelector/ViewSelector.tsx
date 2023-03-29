@@ -5,9 +5,9 @@ import {Link} from "react-router-dom";
 const ViewSelector = () => {
 
     let buttons = [
-        {id: "day", isSelected: false, buttonName: "День", link: "/schedulebyday"},
-        {id: "week", isSelected: true, buttonName: "Неделя", link: "/schedule"},
-        {id: "month", isSelected: false, buttonName: "Месяц", link: "/login"},
+        {id: "day", isSelected: false, buttonName: "День", link: "/logined/schedulebyday"},
+        {id: "week", isSelected: true, buttonName: "Неделя", link: "/logined/schedule"},
+        {id: "month", isSelected: false, buttonName: "Месяц", link: "/"},
     ]
 
     return (
