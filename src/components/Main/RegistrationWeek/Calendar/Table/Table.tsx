@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import s from "./Table.module.scss"
 import {useAppSelector} from "../../../../../hooks/redux";
+import TableContent from "./TableContent/TableContent";
 
 export const timeMarkers = [
     "8.00",
@@ -92,6 +93,11 @@ const Table = ({info}:Props) => {
                 <span className={s.rtlCircle}/>
                 <span className={s.rtLine}/>
             </div>
+
+            <TableContent />
+
+
+
 
 
         </div>

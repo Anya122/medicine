@@ -1,0 +1,21 @@
+.tableContent {
+  position: absolute;
+  width: 1331px;
+  height: 729px;
+  margin-top: 47px;
+  margin-left: 50px;
+}
+
+.card {
+  position: absolute;
+  width: 192px;
+  height: 80px;
+  border: royalblue solid 1px;
+  border-radius: 10px;
+  margin-top: 0;
+  margin-bottom: 1px;
+  text-align: center;
+  line-height: 80px;
+}
+
+/*# sourceMappingURL=TableContent.module.css.map */
