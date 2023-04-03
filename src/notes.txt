@@ -1,0 +1,16 @@
+Rifat, [16.03.2023 10:00]
+Адреса ресурсов:
+
+* Jira MC: http://192.168.1.218/jira/secure/RapidBoard.jspa?projectKey=MC&rapidView=61
+* Wiki MC: http://192.168.1.218/confluence/display/MC
+* Git MC: http://192.168.1.218/stash/projects/MC
+
+Rifat, [16.03.2023 10:00]
+инструкция по подключению к впн
+
+1. Установить клиента OpenVPN 2.4.10
+https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.10-I601-Win10.exe
+
+2. Закинуть содержимое в папку в винде C:\Program Files\OpenVPN\config.
+
+3. Указать в клиенте папку с конфигом C:\Program Files\OpenVPN\config

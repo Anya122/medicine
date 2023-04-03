@@ -1,16 +1,16 @@
-import React from "react";
-import s from "./ScheduleByDay.module.scss"
+import React, {PropsWithChildren} from "react";
+import s from "./RegistrationWeek.module.scss"
 import Calendar from "./Calendar/Calendar";
 import Properties from "./Properties/Properties";
 
-const ScheduleByDay = () => {
+const RegistrationWeek = () => {
+
     return (
         <div className={s.schedule}>
             <Properties />
             <Calendar />
-
         </div>
     );
 };
 
-export default ScheduleByDay;
+export default RegistrationWeek;

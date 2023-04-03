@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import s from "./Table.module.scss"
 import {useAppSelector} from "../../../../../hooks/redux";
-import {timeMarkers} from "../../../Schedule/Calendar/Table/Table";
+import {timeMarkers} from "../../../RegistrationWeek/Calendar/Table/Table";
 
 
 const Table = () => {
