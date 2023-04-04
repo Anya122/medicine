@@ -2,15 +2,15 @@
   position: absolute;
   width: 1331px;
   height: 729px;
+  border: #dd0000 solid 1px;
   margin-top: 47px;
-  margin-left: 50px;
+  margin-left: 68px;
 }
 
 .card {
   position: absolute;
-  width: 192px;
+  width: 172px;
   height: 80px;
-  border: royalblue solid 1px;
   border-radius: 10px;
   margin-top: 0;
   margin-bottom: 1px;
