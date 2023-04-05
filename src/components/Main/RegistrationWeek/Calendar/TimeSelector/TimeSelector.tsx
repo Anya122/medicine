@@ -1,4 +1,3 @@
-import React, {useEffect, useState} from 'react';
 import s from "./TimeSelector.module.scss"
 import moment from 'moment';
 import 'moment/locale/ru';
@@ -37,6 +36,9 @@ const TimeSelector = () => {
             <button className={s.rightButton} onClick={() => {
                 dispatch(setNewPeriodByWeek('nextWeek'));
             }}/>
+
+            <button className={s.defaultPeriodButton} onClick={()=>{dispatch(setNewPeriodByWeek('thisWeek'))}}/>
+
         </div>
     );
 };
