@@ -3,6 +3,7 @@ import moment from 'moment';
 import 'moment/locale/ru';
 import {timeSlice} from "../../../../../store/reducers/TimeSlice";
 import {useAppDispatch, useAppSelector} from "../../../../../hooks/redux";
+import React from "react";
 
 const TimeSelector = () => {
 

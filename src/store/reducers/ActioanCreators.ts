@@ -18,7 +18,7 @@ export const fetchUsers = () => async (dispatch: AppDispatch) => {
     }
 }
 
-export const loginUser = (data: ILoginRequest) =>
+/*export const loginUser = (data: ILoginRequest) =>
     async (dispatch: Dispatch<any>):Promise<void> => {
         try {
             dispatch(loginStart());
@@ -28,5 +28,5 @@ export const loginUser = (data: ILoginRequest) =>
             console.log(e)
             dispatch(loginFailure(e.message))
         }
-}
+}*/
 

@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import s from "./Table.module.scss"
-import {useAppSelector} from "../../../../../hooks/redux";
+import {useAppDispatch, useAppSelector} from "../../../../../hooks/redux";
 import TableContent from "./TableContent/TableContent";
+import {fetchUsers} from "../../../../../store/reducers/ActioanCreators";
 
 export const timeMarkers = [
     "8.00",
@@ -74,7 +75,15 @@ const Table = ({info}:Props) => {
         return () => clearInterval(interval);
     }, [verticalShift]);
 
+    const dispatch = useAppDispatch();
+    const {users} = useAppSelector(state => state.userReducer);
+    const getUsers = () => {
+        dispatch(fetchUsers());
+    }
 
+    useEffect(()=>{
+       console.log(users);
+    },[users])
 
 
     return (
@@ -93,6 +102,14 @@ const Table = ({info}:Props) => {
                 <span className={s.rtlCircle}/>
                 <span className={s.rtLine}/>
             </div>
+
+            <div className={s.usersArea}>
+                <button className={s.butGetUsers} onClick={()=>getUsers()}>Получить записи</button>
+                <div className={s.usersData}>
+                    {users.length > 0 && JSON.stringify(users, null, 5)}
+                </div>
+            </div>
+
 
             <TableContent />
 
