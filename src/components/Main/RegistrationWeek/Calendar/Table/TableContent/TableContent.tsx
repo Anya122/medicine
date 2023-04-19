@@ -6,6 +6,10 @@ import moment from 'moment';
 const TableContent = () => {
 
 
+
+
+
+
     const oneCard = (day: number, startTime: string, endTime: string, content: string) => {
 
         const stH = +(moment(startTime, 'LT').format('H'));
@@ -49,7 +53,7 @@ const TableContent = () => {
                 oneCard(4, "9:00", "10:00", "Яковлев")
             }
             {
-                oneCard(7, "10:15", "10:59", "Потапов")
+                oneCard(7, "11:15", "11:39", "Потапов")
             }
 
         </div>
