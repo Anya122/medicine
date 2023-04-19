@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 import s from "./Table.module.scss"
 import {useAppDispatch, useAppSelector} from "../../../../../hooks/redux";
 import TableContent from "./TableContent/TableContent";
-import {fetchUsers} from "../../../../../store/reducers/ActioanCreators";
+import {fetchVisit} from "../../../../../store/reducers/ActioanCreators";
+
 
 export const timeMarkers = [
     "8.00",
@@ -30,9 +31,6 @@ type Props = {
 
 
 const Table = ({info}:Props) => {
-    const visits = useAppSelector(state => state.visitsReducer);
-
-
     const vLines = Array(6).fill(0).map((t, i) => i + 1);
 
     // Смещение на 1 час - 81px
@@ -75,15 +73,15 @@ const Table = ({info}:Props) => {
         return () => clearInterval(interval);
     }, [verticalShift]);
 
+    const visit = useAppSelector(state => state.visitsReducer.visit);
     const dispatch = useAppDispatch();
-    const {users} = useAppSelector(state => state.userReducer);
-    const getUsers = () => {
-        dispatch(fetchUsers());
+    const getVisits = () => {
+        dispatch(fetchVisit());
     }
 
     useEffect(()=>{
-       console.log(users);
-    },[users])
+      // console.log(visit);
+    },[visit])
 
 
     return (
@@ -104,9 +102,9 @@ const Table = ({info}:Props) => {
             </div>
 
             <div className={s.usersArea}>
-                <button className={s.butGetUsers} onClick={()=>getUsers()}>Получить записи</button>
+                <button className={s.butGetUsers} onClick={()=>getVisits()}>Получить записи</button>
                 <div className={s.usersData}>
-                    {users.length > 0 && JSON.stringify(users, null, 5)}
+                    {visit.length > 0 && JSON.stringify(visit[0].beginTime, null, 5)}
                 </div>
             </div>
 

@@ -1,9 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import s from "./TableContent.module.scss"
 import moment from 'moment';
 
+import {useAppDispatch, useAppSelector} from "../../../../../../hooks/redux";
+import {fetchVisit} from "../../../../../../store/reducers/ActioanCreators";
+
 
 const TableContent = () => {
+
+    const visit = useAppSelector(state => state.visitsReducer.visit);
+    const dispatch = useAppDispatch();
+
+    useEffect(()=>{
+        dispatch(fetchVisit());
+
+        const cardsOneWeek = visit.map((t)=>{
+            //day: number, startTime: string, endTime: string, content: string
+            oneCard(
+                +(moment(t.beginTime, moment.ISO_8601).format('E')),
+                moment(t.beginTime, moment.ISO_8601).format('LT'),
+                moment(t.endTime, moment.ISO_8601).format('LT'),
+                t.comment
+            );
+
+        });
+
+        console.log(cardsOneWeek);
+
+
+    }, [])
+
+
+
+
+
+
 
 
 
