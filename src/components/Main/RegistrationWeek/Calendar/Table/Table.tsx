@@ -79,10 +79,6 @@ const Table = ({info}:Props) => {
         dispatch(fetchVisit());
     }
 
-    useEffect(()=>{
-      // console.log(visit);
-    },[visit])
-
 
     return (
         <div className={s.table}>
@@ -104,7 +100,7 @@ const Table = ({info}:Props) => {
             <div className={s.usersArea}>
                 <button className={s.butGetUsers} onClick={()=>getVisits()}>Получить записи</button>
                 <div className={s.usersData}>
-                    {visit.length > 0 && JSON.stringify(visit[0].beginTime, null, 5)}
+                    {visit.length > 0 && JSON.stringify(visit, null, 5)}
                 </div>
             </div>
 
