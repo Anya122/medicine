@@ -23,7 +23,6 @@
   font-weight: 400;
   letter-spacing: -0.41px;
   color: rgb(0, 0, 0);
-  z-index: 2;
   background-color: transparent;
 }
 
@@ -72,7 +71,6 @@
   font-size: 15px;
   line-height: 22px;
   letter-spacing: -0.41px;
-  z-index: 1;
 }
 
 .rtlCircle {
@@ -90,6 +88,28 @@
   width: 100%;
   height: 0;
   transform: translateX(-2px);
+}
+
+.usersArea {
+  position: absolute;
+  margin-top: 1000px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  width: 400px;
+}
+
+.butGetUsers {
+  height: 50px;
+  font-size: 30px;
+}
+
+.usersData {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  line-height: 25px;
+  width: fit-content;
+  height: fit-content;
 }
 
 /*# sourceMappingURL=Table.module.css.map */

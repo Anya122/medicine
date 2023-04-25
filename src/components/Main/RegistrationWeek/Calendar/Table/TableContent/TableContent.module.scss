@@ -1,0 +1,26 @@
+.tableContent {
+  position: absolute;
+  width: 1331px;
+  height: calc(767px + 9px - 47px);
+
+ border: #dd0000 solid 1px;
+
+  margin-top: 47px;
+  margin-left: 68px;
+}
+
+.card {
+  position: absolute;
+  width: 172px;
+  height: 80px;
+
+  border-radius: 10px;
+
+  margin-top: 0;
+  margin-bottom: 1px;
+
+  text-align: center;
+  line-height: 80px;
+
+
+}

@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
 import s from "./TimeSelector.module.scss"
 import moment from 'moment';
 import 'moment/locale/ru';
 import {timeSlice} from "../../../../../store/reducers/TimeSlice";
 import {useAppDispatch, useAppSelector} from "../../../../../hooks/redux";
+import React from "react";
 
 const TimeSelector = () => {
 
@@ -37,6 +37,9 @@ const TimeSelector = () => {
             <button className={s.rightButton} onClick={() => {
                 dispatch(setNewPeriodByWeek('nextWeek'));
             }}/>
+
+            <button className={s.defaultPeriodButton} onClick={()=>{dispatch(setNewPeriodByWeek('thisWeek'))}}/>
+
         </div>
     );
 };

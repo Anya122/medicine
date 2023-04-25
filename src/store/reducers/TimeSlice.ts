@@ -20,6 +20,8 @@ export const timeSlice = createSlice({
                     state.selectedWeek = +(moment().subtract(-(state.weekBias), 'week').format('w'))
                     break;
                 case 'thisWeek':
+                    state.weekBias = 0;
+                    state.selectedWeek = +(moment().format('w'));
                     break;
                 case 'prevWeek':
                     state.weekBias -= 1;

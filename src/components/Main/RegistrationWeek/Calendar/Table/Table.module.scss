@@ -26,7 +26,6 @@
   letter-spacing: -0.41px;
   color: rgba(0, 0, 0, 1);
 
-  z-index: 2;
   background-color: transparent;
 }
 
@@ -85,7 +84,6 @@
   line-height: 22px;
   letter-spacing: -0.41px;
 
-  z-index: 1;
 }
 
 .rtlCircle {
@@ -107,10 +105,28 @@
 }
 
 
+// Получение пользаков (временно)
+.usersArea {
+  position: absolute;
+  margin-top: 1000px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  width: 400px;
+}
 
+.butGetUsers {
+  height: 50px;
+  font-size: 30px;
+}
 
-
-
+.usersData {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  line-height: 25px;
+  width: fit-content;
+  height: fit-content;
+}
 
 
 

@@ -36,4 +36,14 @@
   color: rgba(0, 0, 0, 0.7);
 }
 
+.defaultPeriodButton {
+  display: block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  outline: none;
+  border-style: none;
+  background-color: blueviolet;
+}
+
 /*# sourceMappingURL=TimeSelector.module.css.map */
