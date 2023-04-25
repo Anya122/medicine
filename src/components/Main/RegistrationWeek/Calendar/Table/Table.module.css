@@ -90,26 +90,4 @@
   transform: translateX(-2px);
 }
 
-.usersArea {
-  position: absolute;
-  margin-top: 1000px;
-  margin-left: 50px;
-  margin-bottom: 50px;
-  width: 400px;
-}
-
-.butGetUsers {
-  height: 50px;
-  font-size: 30px;
-}
-
-.usersData {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  font-size: 20px;
-  line-height: 25px;
-  width: fit-content;
-  height: fit-content;
-}
-
 /*# sourceMappingURL=Table.module.css.map */

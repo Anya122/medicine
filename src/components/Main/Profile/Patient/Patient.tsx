@@ -1,10 +1,14 @@
 import React from "react";
-import s from "./Patient.module.scss"
-import ProfileBtns from "../ProfileBtns/ProfileBtns"
-import Files from "../Files/Files"
+import s from "./Patient.module.scss";
+import ProfileBtns from "../ProfileBtns/ProfileBtns";
+import Files from "../Files/Files";
+import {useNavigate} from "react-router-dom";
 
 
 const Patient = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div className={s.Patient}>
             <ProfileBtns/> 
@@ -36,7 +40,7 @@ const Patient = () => {
                 </div>
             </div>
 
-            <button  className={s.PatientBtn}>
+            <button  className={s.PatientBtn} onClick={()=>{navigate("/logined/protocol")}}>
                 Начать прием
                 <div  className={s.ArrBtn}></div>
 

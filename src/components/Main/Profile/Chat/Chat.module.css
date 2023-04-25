@@ -33,7 +33,6 @@
 .ChatTop {
   display: flex;
   align-items: center;
-  column-gap: 26px;
-}
-
-/*# sourceMappingURL=Chat.module.css.map */
+  -moz-column-gap: 26px;
+       column-gap: 26px;
+}/*# sourceMappingURL=Chat.module.css.map */

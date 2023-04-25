@@ -1,0 +1,15 @@
+.Protocol {
+  padding-left: 25px;
+  display: flex;
+}
+
+.ProtocolMain {
+  background-color: #FFFFFF;
+  height: 100vh;
+  width: 1379px;
+}
+
+.ProtocolWrapper {
+  padding-left: 40px;
+  font-family: "Calibri";
+}/*# sourceMappingURL=Protocol.module.css.map */
