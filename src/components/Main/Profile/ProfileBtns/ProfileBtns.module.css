@@ -1,6 +1,7 @@
 .Btns {
   display: flex;
-  column-gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   margin-bottom: 38px;
 }
 
@@ -16,6 +17,4 @@
 
 .BtnItem:hover {
   background-color: #DADADA;
-}
-
-/*# sourceMappingURL=ProfileBtns.module.css.map */
+}/*# sourceMappingURL=ProfileBtns.module.css.map */

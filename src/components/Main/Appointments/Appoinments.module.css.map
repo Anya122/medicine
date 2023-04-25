@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["Appoinments.module.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;EACA;EACA;;;AAIJ;EACE","file":"Appoinments.module.css"}
+{"version":3,"sources":["Appoinments.module.scss","Appoinments.module.css"],"names":[],"mappings":"AAAA;EACI,cAAA;EACA,WAAA;EACA,oCAAA;EACA,kBAAA;EACA,iBAAA;ACCJ;;ADGA;EACE,aAAA;ACAF","file":"Appoinments.module.css"}

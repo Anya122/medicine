@@ -67,11 +67,15 @@ const Table = () => {
                 </div>
 
                 <div className={s.grid}>
+    
                     {timeMarkers.map(t =>
                     
-                        <div key={t} className={s.hBlock}  onClick={toggle}>
-                            <span className={s.GrayCircle}/>
-                            {/* <span  className={s.hTimeLine}/> */}
+                        <div key={t} className={s.Block}  >
+                            <span  className={s.hTimeLine}/>
+                            <div className={s.hBlock} onClick={toggle}>
+                                <span className={s.GrayCircle}/>
+                            </div>
+                            
                             
                         </div>)}
                 </div>

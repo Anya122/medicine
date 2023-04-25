@@ -1,4 +1,4 @@
-.table {
+nn.table {
   box-sizing: border-box;
   margin-left: 20px;
   font-family: 'SF';
@@ -15,16 +15,21 @@
 
 
 .hBlock {
-  margin-top: 10px;
+  margin-top: 3px;
   background-color: #F6F6F6;
-  height: 60px;
+  height: 77px;
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: 57px;
   padding-left: 25px;
+  width: 100%;
+}
+
+.Block{
   width: 1229px;
+  height: 80px;
 }
 
 
@@ -34,16 +39,19 @@
     background-color: #FFFFFF;
   }
 }
-
+.Block:nth-child(1) {
+  margin-top: 37px;
+}
 .timeStamp:nth-child(1) {
-  margin-top: 17px;
+  margin-top: 20px;
 }
 .timeStamp {
   
-  width: 54px;
-  height: 45px;
-  background-color: #FFFFFF;
-  border-radius: 20px;
+  // width: 54px;
+  // height: 45px;
+  // background-color: #FFFFFF;
+  // border-radius: 20px;
+  font-family: SF;
   font-size: 15px;
   line-height: 22px;
   font-weight: 400;
@@ -55,18 +63,21 @@
   padding-top: 10px;
   flex-direction: row;
 
-  margin-bottom: 25px;
+  margin-bottom: 55px;
+  margin-left: 10px;
 
  
 
 }
 
-// .hTimeLine {
-//   display: block;
-//   width: 1170px;
-//   border-top: rgba(213, 44, 44, 0.5) 1px solid;
-//   // margin-left: 5px;
-// }
+.hTimeLine {
+  display: block;
+  width: 100%;
+  border-top: #70707080 1px solid;
+  margin-top: 5px;
+  margin-left: 65px;
+  
+}
 
 .vLines {
   position: absolute;

@@ -16,7 +16,6 @@
 .File {
   display: flex;
   align-items: center;
-  column-gap: 10px;
-}
-
-/*# sourceMappingURL=Files.module.css.map */
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}/*# sourceMappingURL=Files.module.css.map */
