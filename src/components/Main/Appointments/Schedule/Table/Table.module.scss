@@ -1,4 +1,4 @@
-nn.table {
+.table {
   box-sizing: border-box;
   margin-left: 20px;
   font-family: 'SF';
@@ -6,13 +6,24 @@ nn.table {
 
 .grid {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 63px 0;
+}
+
+.grids{
+  position: absolute;
 }
 
 .flex{
   display: flex;
 }
 
-
+.timeStamps{
+  display: flex;
+  
+  margin-bottom: 30px;
+}
 
 .hBlock {
   margin-top: 3px;
@@ -22,7 +33,7 @@ nn.table {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 57px;
+  margin-left: 45px;
   padding-left: 25px;
   width: 100%;
 }
@@ -43,28 +54,17 @@ nn.table {
   margin-top: 37px;
 }
 .timeStamp:nth-child(1) {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .timeStamp {
-  
-  // width: 54px;
-  // height: 45px;
-  // background-color: #FFFFFF;
-  // border-radius: 20px;
-  font-family: SF;
   font-size: 15px;
   line-height: 22px;
   font-weight: 400;
   letter-spacing: -0.41px;
   color: rgba(0, 0, 0, 1);
 
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 10px;
-  flex-direction: row;
-
-  margin-bottom: 55px;
-  margin-left: 10px;
+  background-color: transparent;
+  
 
  
 
@@ -73,11 +73,13 @@ nn.table {
 .hTimeLine {
   display: block;
   width: 100%;
-  border-top: #70707080 1px solid;
+  border-top: #0000004D 1px solid;
   margin-top: 5px;
-  margin-left: 65px;
+  margin-left: 43px;
   
 }
+
+
 
 .vLines {
   position: absolute;
@@ -140,7 +142,7 @@ nn.table {
   background-color: rgba(221, 0, 0, 1);
   border-radius: 50%;
 
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .rtLine {
@@ -159,7 +161,27 @@ nn.table {
 }
 
 
+.usersArea {
+  position: absolute;
+  margin-top: 1000px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  width: 400px;
+}
 
+.butGetUsers {
+  height: 50px;
+  font-size: 30px;
+}
+
+.usersData {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  line-height: 25px;
+  width: fit-content;
+  height: fit-content;
+}
 
 
 

@@ -2,7 +2,10 @@ import React, {useEffect, useState} from 'react';
 import s from "./Table.module.scss";
 import Modal from "../../AppModal/Modal/Modal";
 import useModal from "../../AppModal/useModal/useModal";
-import {asd} from "../../AppModal/FirstModal/FirstModal"
+import {asd} from "../../AppModal/FirstModal/FirstModal";
+import {useAppDispatch, useAppSelector} from "../../../../../hooks/redux";
+import TableContent from "./TableContent/TableContent";
+import {fetchVisit} from "../../../../../store/reducers/ActioanCreators";
 let secondForm = false;
 const Table = () => {
 
@@ -37,7 +40,7 @@ const Table = () => {
         return clock.getMinutes();
     });
     const [verticalShift, setVerticalShift] = useState(() => {
-        const res = ((h * 60 + m - 8 * 60) * 629) / (9 * 60);
+        const res = ((h * 60 + m - 8 * 60) * 759) / (9 * 60);
         return `${res.toString()}px`;
     });
 
@@ -48,25 +51,28 @@ const Table = () => {
             const hour = clock.getHours();
             setH(clock.getHours());
             setM(clock.getMinutes());
-            setVerticalShift((((hour * 60 + min - 8 * 60) * 629) / (9 * 60)).toString()+'px');
+            setVerticalShift((((hour * 60 + min - 8 * 60) * 759) / (9 * 60)).toString()+'px');
         }, 10000);
         return () => clearInterval(interval);
     }, [verticalShift]);
 
     const { isOpen, toggle} = useModal();
     
-
+    const visit = useAppSelector(state => state.visitsReducer.visit);
+    const dispatch = useAppDispatch();
+    const getVisits = () => {
+        dispatch(fetchVisit());
+    }
     return (
         <div className={s.table}>
 
             <div>
                 <div className={s.grid}>
                     {timeMarkers.map(t =>
-                
                             <div key={t} className={s.timeStamp}>{t}</div>)}
                 </div>
 
-                <div className={s.grid}>
+                <div className={s.grids}>
     
                     {timeMarkers.map(t =>
                     
@@ -101,7 +107,14 @@ const Table = () => {
                 <span className={s.rtLine}/>
             </div>
 
-            
+            <div className={s.usersArea}>
+                {/* <button className={s.butGetUsers} onClick={()=>getVisits()}>Получить записи</button>
+                <div className={s.usersData}>
+                    {visit.length > 0 && JSON.stringify(visit, null, 5)}
+                </div> */}
+            </div>
+
+            <TableContent />
 
 
         </div>

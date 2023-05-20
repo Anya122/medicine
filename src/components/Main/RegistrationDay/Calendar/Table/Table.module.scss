@@ -3,8 +3,13 @@
 }
 
 .grid {
-  position: absolute;
+  
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
 }
+
+
 
 .hBlock:nth-child(1) {
   margin-top: 36px;
@@ -28,6 +33,7 @@
 
   z-index: 2;
   background-color: transparent;
+  
 }
 
 .hTimeLine {

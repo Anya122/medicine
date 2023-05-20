@@ -6,7 +6,8 @@ import s from './Medicaments.module.scss';
 function Medicaments() {
   
   return (
-    <div className={s.Medicaments}>
+   <div className={s.Medicaments}>
+     <div className={s.Medicament}>
       <div className={s.Head}>
         <div className={s.Arrow}></div>
         <div className={s.Label}>Возможные препараты</div>
@@ -16,11 +17,13 @@ function Medicaments() {
         <button type="submit" className={s.SearchBtn}></button>
         <input type="text" className={s.Search} placeholder="Препарат или рецепт"/>
       </div>
-      
-      <div className={s.Items}>
+      <div className={s.Labels}>
         <div className={s.LabelI}>Препараты</div>
         <div className={s.LabelI}>Рецепты</div>
-
+      </div>
+      
+      <div className={s.Items}>
+        
         <div className={s.MedItem}>
           <div className={s.Item}>
             <input className={s.Check} type="checkbox" id = "checkbox1"/>
@@ -50,8 +53,31 @@ function Medicaments() {
           <div className={s.LabelI}>Название</div>
         </div>
       </div>
+
+      
         
     </div>
+      <div className={s.White}></div>
+      <div className={s.SelectedMed}>
+        <div className={s.Label}>Ваши препараты</div>
+
+        <div className={s.Items}>
+        
+        <div className={s.MedItem}>
+          <div className={s.Item}>
+          </div>
+          <div className={s.LabelI}>Название</div>
+        </div>
+        <div className={s.MedItem}>
+          <div className={s.Item}>
+          </div>
+          <div className={s.LabelI}>Название</div>
+        </div>
+        
+      </div>
+
+      </div>
+   </div>
   );
 }
 

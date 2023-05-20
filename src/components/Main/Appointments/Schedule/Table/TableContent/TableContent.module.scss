@@ -1,0 +1,44 @@
+.tableContent {
+  position: absolute;
+  width: 1331px;
+  height: calc(767px + 9px - 47px);
+
+
+
+  margin-top: 36px;
+  margin-left: 45px;
+}
+
+.card {
+  position: absolute;
+  width: 1236px;
+  height: 80px;
+
+  border-radius: 20px;
+
+  
+  margin-bottom: 1px;
+
+  align-items: center;
+  line-height: 80px;
+  display: flex;
+  gap: 0 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 20px;
+
+
+}
+
+.Info{
+  display: flex;
+  gap: 0 90px;
+}
+
+.Circle{
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+

@@ -1,5 +1,8 @@
 import React from "react";
 import s from "./Chat.module.scss"
+import Face from "../assets/face-happy.svg"
+import Traced from "../assets/traced.svg"
+import Mic from "../assets/mic.svg"
 
 
 
@@ -13,7 +16,7 @@ const Patient = () => {
                 </div>
 
                 <div className={s.ChatMess}>
-                    
+                    <div>Здесь пока нет сообщений...</div>
                     
                 </div>
                 
@@ -21,7 +24,15 @@ const Patient = () => {
             </div>
             <div className={s.ChatBottom}>
                 
+                <div className={s.ChatMedia}>
+                     <img className={s.Media} src={Face}/>
+                    <div className={s.Mess}>Сообщение</div>
+                </div>    
 
+                <div className={s.ChatMedia}>
+                     <img className={s.Media} src={Traced}/>
+                     <img className={s.Media} src={Mic}/>
+                </div>
             
             </div>
             

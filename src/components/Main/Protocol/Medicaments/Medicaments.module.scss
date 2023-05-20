@@ -1,6 +1,9 @@
 .Medicaments{
-    padding: 25px 39px 117px 34px;
     font-family: 'Calibri';
+}
+
+.Medicament{
+    padding: 25px 39px 33px 34px;
     width: 414px;
 }
 
@@ -54,16 +57,24 @@
     opacity: 0.5;
 }
 
+.Labels{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 35px;
+}
+
 .LabelI{
     font-size: 20px;
     text-align: center;
 }
 
 .Items{
+    margin-top: 20px;
     display: flex;
     
     justify-content: space-between;
-    gap: 71px 21px;
+    gap: 51px 21px;
     flex-wrap: wrap;
 }
 
@@ -99,4 +110,14 @@
     bottom: 17px;
     left: 45%;
     position: absolute;
+}
+
+.White{
+    width: 100%;
+    height: 30px;
+    background-color: #FFFFFF;
+}
+
+.SelectedMed{
+    padding: 25px 39px 50px 34px;
 }
