@@ -108,10 +108,10 @@ const Table = () => {
             </div>
 
             <div className={s.usersArea}>
-                {/* <button className={s.butGetUsers} onClick={()=>getVisits()}>Получить записи</button>
-                <div className={s.usersData}>
-                    {visit.length > 0 && JSON.stringify(visit, null, 5)}
-                </div> */}
+                    {/* <button className={s.butGetUsers} onClick={()=>getVisits()}>Получить записи</button>
+                    <div className={s.usersData}>
+                        {visit.length > 0 && JSON.stringify(visit, null, 5)}
+                    </div> */}
             </div>
 
             <TableContent />

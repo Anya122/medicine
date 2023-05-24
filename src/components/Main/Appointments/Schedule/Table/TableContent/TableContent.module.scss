@@ -26,6 +26,7 @@
   padding-left: 25px;
   padding-right: 25px;
   font-size: 20px;
+  cursor: pointer;
 
 
 }
@@ -33,6 +34,7 @@
 .Info{
   display: flex;
   gap: 0 90px;
+  text-align: center;
 }
 
 .Circle{
@@ -42,3 +44,23 @@
   background-color: #FFFFFF;
 }
 
+.Client{
+  width: 280px;
+}
+.Cabinet{
+  width: 50px;
+}
+.Type{
+  width: 300px;
+}
+
+.cardLink{
+  color: #000000;
+}
+
+.cardLink:hover{
+  color:rgb(36, 32, 132);
+}
+.cardLink:active {
+  color: rgb(186, 24, 24);
+}

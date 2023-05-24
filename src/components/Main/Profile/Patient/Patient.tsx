@@ -3,11 +3,25 @@ import s from "./Patient.module.scss";
 import ProfileBtns from "../ProfileBtns/ProfileBtns";
 import Files from "../Files/Files";
 import {useNavigate} from "react-router-dom";
+import {useSelector} from "react-redux";
+import { RootState } from "../../../../store/store";
+import {IVisit} from "../../../../models/IVisit";
+import start from "../assets/Start.svg"
+import stop from "../assets/pause.png"
+
 
 
 const Patient = () => {
 
     const navigate = useNavigate();
+    
+    const surname = useSelector((state:RootState) => state.setReducer.data.surname);
+    const name = useSelector((state:RootState) => state.setReducer.data.name);
+    const patronymic = useSelector((state:RootState) => state.setReducer.data.patronymic);
+    
+    const save = useSelector((state: RootState) => state.setReducer.save);
+    
+    
 
     return (
         <div className={s.Patient}>
@@ -16,9 +30,11 @@ const Patient = () => {
             <div>
                 <div className={s.PatientNum}>Пациент № 050</div>
 
+          
+            
             <div className={s.ThisPatient}>
                 <div className={s.PatientImg}></div>
-                <div className={s.PatientName}>Константинов Константин</div>
+                <div className={s.PatientName}>{surname}{name}{patronymic}</div>
             </div>
 
             <div className={s.AboutPatient}>
@@ -41,8 +57,9 @@ const Patient = () => {
             </div>
 
             <button  className={s.PatientBtn} onClick={()=>{navigate("/logined/protocol")}}>
-                Начать прием
-                <div  className={s.ArrBtn}></div>
+                {save? 'Завершить прием': 'Начать прием'}
+
+                <img  className={s.ArrBtn} src = {save? stop: start}></img>
 
 
             </button>

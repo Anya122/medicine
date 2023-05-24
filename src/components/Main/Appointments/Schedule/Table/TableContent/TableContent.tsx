@@ -1,17 +1,21 @@
 import React, {useEffect} from 'react';
 import s from "./TableContent.module.scss"
 import moment from 'moment';
+import {useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import {useAppDispatch, useAppSelector} from "../../../../../../hooks/redux";
 import {fetchVisit} from "../../../../../../store/reducers/ActioanCreators";
 import {IVisit} from "../../../../../../models/IVisit";
+// import {addVisit} from "../../../../../../store/reducers/ProfileSlice"
+import {setData} from "../../../../../../store/reducers/ActioanCreators";
 
 
 const TableContent = () => {
 
     const visit = useAppSelector(state => state.visitsReducer.visit);
     const dispatch = useAppDispatch();
-
+    const navigate = useNavigate();
     // При вмотировании 1 раз получаем визиты
     useEffect(() => {
         dispatch(fetchVisit());
@@ -48,8 +52,14 @@ const TableContent = () => {
                 }
 
             return (
-                <div className={s.card} style={styles} key={key}>
-
+                <Link to = "/logined/profile" className={s.cardLink}>
+                <div className={s.card} style={styles} key={key} onClick={() => {
+                        dispatch(setData({
+                            surname,
+                            name,
+                            patronymic
+                          }));
+                    }}>
                     <span className={s.Circle}></span>
 
                     <div className={s.Info}>
@@ -59,13 +69,11 @@ const TableContent = () => {
                             {name}
                             {patronymic}
                         </div>
-                        <div>{cabinet}</div>
-                        <div>{serviceType}</div>
+                        <div className={s.Cabinet}>{cabinet}</div>
+                        <div className={s.Type}>{serviceType}</div>
                     </div>
-                    
-                    
-                    
                 </div>
+                </Link>
             )
         }
         

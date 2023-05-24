@@ -28,3 +28,17 @@ export const fetchVisit = () => async (dispatch: AppDispatch) => {
         dispatch(visitSlice.actions.visitFetchingError(e.message))
     }
 }
+
+export const setData = (data: any) => {
+    return {
+      type: 'SET_DATA',
+      payload: data,
+    };
+  };
+
+  export const updateVariable = (newValue: boolean) => {
+    return {
+      type: 'UPDATE_VARIABLE',
+      payload: newValue,
+    }
+  }
